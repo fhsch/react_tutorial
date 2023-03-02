@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
-import pic from "./images/katie-zaferes.png"
+// import pic from "./images/katie-zaferes.png"
 
 export default function App() {
   return (
