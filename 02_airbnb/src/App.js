@@ -1,20 +1,29 @@
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
-// import pic from "./images/katie-zaferes.png"
+import data from "./data"
 
 export default function App() {
+  // map over imported array (usually API call) top access its properties to create an Array of Card components
+  const cards = data.map(item => {
+    return (
+      <Card
+        key={item.id}
+        // passes in ALL properties; need to be accessed differently in Card
+        item={item}             
+        // EVEN SHORTER "SPREAD" SYNTAX (he doesn't like it): {...item} SPREAD item properties; access as below without item
+        // img={item.coverImg}
+        // rating={item.stats.rating} etc.
+      />
+    )
+  })
   return (
-      <div>
-          <Navbar />
-          <Card 
-            img="katie-zaferes.png"
-            rating={5.0}
-            reviewCount={6}
-            country="USA"
-            title="Life Lessons with Katie Zaferes"
-            price={136}
-          />
-      </div>
+    <div>
+        <Hero />
+        <Navbar />
+        <section className="cards-list">
+            {cards}
+        </section>
+    </div>
   )
 }
