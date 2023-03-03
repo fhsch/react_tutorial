@@ -19,8 +19,8 @@ export default function App() {
   })
   return (
     <div>
-        <Hero />
         <Navbar />
+        <Hero />
         <section className="cards-list">
             {cards}
         </section>
