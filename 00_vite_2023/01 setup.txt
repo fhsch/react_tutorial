@@ -1,0 +1,7 @@
+Start/install: npm create vite@latest
+choopse options: name and framework
+OR: npm create vite@latest app-name -- --template react
+
+cd folder
+npm install / npm i (installs all dependencies) 
+npm run dev
